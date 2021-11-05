@@ -25,19 +25,23 @@ class SongForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>Title:</label>
-                <input type="text" name="title" onChange={this.handleChange}/> <br />
-                <label>Artist:</label>
-                <input type="text" name="artist" onChange={this.handleChange}  /> <br />
-                <label>Album:</label>
-                <input type="text" name="album" onChange={this.handleChange} /> <br />
-                <label>Release Date:</label>
-                <input type="text" name="release_date" onChange={this.handleChange} /> <br />
-                <label>Genre:</label>
-                <input type="text" name="genre" onChange={this.handleChange} /> <br />
-                <button type="submit">Add Song</button>
-            </form>
+            <div>
+                <h4>Add a Song!</h4>
+            
+                <form onSubmit={this.handleSubmit}>
+                    <label>Title:</label>
+                    <input type="text" name="title" onChange={this.handleChange}/> <br />
+                    <label>Artist:</label>
+                    <input type="text" name="artist" onChange={this.handleChange}  /> <br />
+                    <label>Album:</label>
+                    <input type="text" name="album" onChange={this.handleChange} /> <br />
+                    <label>Release Date:</label>
+                    <input type="text" name="release_date" onChange={this.handleChange} /> <br />
+                    <label>Genre:</label>
+                    <input type="text" name="genre" onChange={this.handleChange} /> <br />
+                    <button type="submit">Add Song</button>
+                </form>
+            </div>
         );
     }
 }

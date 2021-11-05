@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import MusicTable from './MusicTable/MusicTable';
 import SongForm from './SongForm/SongForm';
 import axios from 'axios';
+import TitleBar from './TitleBar/TitleBar';
+import Footer from './Footer/Footer';
+
 
 
 class App extends Component {
@@ -39,8 +42,10 @@ class App extends Component {
     render() {
         return (
             <div>
+                <TitleBar />
                 <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} /> <br />
-                <SongForm createNewSong={this.addSong}/>
+                <SongForm createNewSong={this.addSong} />
+                <Footer />
             </div>
         )
     }
