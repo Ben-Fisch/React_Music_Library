@@ -31,15 +31,15 @@ class App extends Component {
         this.getAllSongs()
     }
 
-    addSong = async () => {
-        let response = await axios.post('http://127.0.0.1:8000/songs/');
+    addSong = async (song) => {
+        let response = await axios.post('http://127.0.0.1:8000/songs/', song);
         this.getAllSongs()
     }
 
     render() {
         return (
             <div>
-                <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} />
+                <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} /> <br />
                 <SongForm createNewSong={this.addSong}/>
             </div>
         )

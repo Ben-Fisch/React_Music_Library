@@ -7,8 +7,9 @@ class SongForm extends Component {
             title: '',
             artist: '',
             album: '',
+            release_date: '',
             genre: '',
-            release_date: ''
+            
         }
     }
     handleChange = (event) => {
@@ -19,7 +20,7 @@ class SongForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.addSong(this.state)
+        this.props.createNewSong(this.state)
     }
 
     render() {
@@ -31,10 +32,10 @@ class SongForm extends Component {
                 <input type="text" name="artist" onChange={this.handleChange}  /> <br />
                 <label>Album:</label>
                 <input type="text" name="album" onChange={this.handleChange} /> <br />
-                <label>Genre:</label>
-                <input type="text" name="genre" onChange={this.handleChange} /> <br />
                 <label>Release Date:</label>
                 <input type="text" name="release_date" onChange={this.handleChange} /> <br />
+                <label>Genre:</label>
+                <input type="text" name="genre" onChange={this.handleChange} /> <br />
                 <button type="submit">Add Song</button>
             </form>
         );
