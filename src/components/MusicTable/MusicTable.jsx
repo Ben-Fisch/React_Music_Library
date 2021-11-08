@@ -3,7 +3,8 @@ import './MusicTable.css';
 
 function MusicTable(props) {
     return (
-            <div className="container" >
+        <div className="container" >
+            <h4>Your Music</h4>
                 <table className="table">
                     <thead>
                         <tr>
@@ -31,7 +32,7 @@ function MusicTable(props) {
                     })}
                     
                 </table>
-            </div>
+        </div>
     )
 }
 export default MusicTable;

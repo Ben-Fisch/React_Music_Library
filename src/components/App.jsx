@@ -9,6 +9,7 @@ import SearchBar from './SearchBar/SearchBar';
 
 
 
+
 class App extends Component {
     constructor(props) {
         super(props)
@@ -58,6 +59,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                
                 <TitleBar /> <br />
                 <SearchBar filterSongs={this.searchForSongs }/>
                 <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} /> <br />

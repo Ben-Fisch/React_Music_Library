@@ -1,7 +1,7 @@
 .footer {
-    background-color: rgb(1, 212, 96);
+    background-color: #2ec4b6;
     width: 100%;
-    box-shadow: 0 50vh 0 50vh rgb(1, 212, 96) ;
+    box-shadow: 0 50vh 0 50vh #2ec4b6 ;
     text-align: center;
     margin-top: 2em;
 }
