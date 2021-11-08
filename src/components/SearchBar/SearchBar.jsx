@@ -16,18 +16,17 @@ class SearchBar extends Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.filterSongs(this.props.searchTerm)
-    }
+        this.props.filterSongs(this.state.searchTerm)
+    };
 
     render() {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit}>
-                    <label>Search for a Song </label>
-                    <input type="text" name="search" onChange={this.handleChange} placeholder="Search.." />
-                    <span>
-                        <button type="submit" className="btn btn-primary">Search</button>
-                    </span>
+                    <div className="form-group">
+                        <input type="text" className="col-sm-3" name="searchTerm" onChange={this.handleChange} placeholder="Search.." />
+                        <button type="submit" className="btn btn-primary btn-sm">Search</button>
+                    </div>
                 </form>
                 <br />
             </div>

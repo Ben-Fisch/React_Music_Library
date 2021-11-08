@@ -58,7 +58,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <TitleBar />
+                <TitleBar /> <br />
                 <SearchBar filterSongs={this.searchForSongs }/>
                 <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} /> <br />
                 <SongForm createNewSong={this.addSong} />
