@@ -4,7 +4,7 @@ import './MusicTable.css';
 function MusicTable(props) {
     return (
             <div className="container" >
-                <table className="table table-bordered">
+                <table className="table">
                     <thead>
                         <tr>
                             <th>Title</th>
@@ -24,7 +24,7 @@ function MusicTable(props) {
                                     <td>{song.album}</td>
                                     <td>{song.genre}</td>
                                     <td>{song.release_date}</td>
-                                    <button onClick={() => props.deleteSong(song.id)}>Delete</button>
+                                    <td><button type="button" className="btn btn-danger" onClick={() => props.deleteSong(song.id)}>Delete</button></td>
                                 </tr>
                             </tbody>
                         )

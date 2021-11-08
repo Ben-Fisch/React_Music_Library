@@ -4,6 +4,8 @@ import SongForm from './SongForm/SongForm';
 import axios from 'axios';
 import TitleBar from './TitleBar/TitleBar';
 import Footer from './Footer/Footer';
+import SearchBar from './SearchBar/SearchBar';
+
 
 
 
@@ -19,6 +21,7 @@ class App extends Component {
         this.getAllSongs();
         this.deleteSong();
         this.addSong();
+        this.searchForSongs();
     }
 
     getAllSongs = async () => {
@@ -39,10 +42,24 @@ class App extends Component {
         this.getAllSongs()
     }
 
+    searchForSongs = async (searchTerm) => {
+        let filteredSongs = this.state.songs.filter(function (song) {
+            if (song.title.includes(searchTerm) || song.artist.includes(searchTerm) || song.album.includes(searchTerm) || song.genre.includes(searchTerm)) {
+                return true
+            } else {
+                return false;
+            }
+        })
+        this.setState({
+            songs: filteredSongs
+        });
+    }
+
     render() {
         return (
             <div>
                 <TitleBar />
+                <SearchBar filterSongs={this.searchForSongs }/>
                 <MusicTable deleteSong={this.deleteSong} songs={this.state.songs} /> <br />
                 <SongForm createNewSong={this.addSong} />
                 <Footer />

@@ -25,21 +25,32 @@ class SongForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h4>Add a Song!</h4>
             
                 <form onSubmit={this.handleSubmit}>
-                    <label>Title:</label>
-                    <input type="text" name="title" onChange={this.handleChange}/> <br />
-                    <label>Artist:</label>
-                    <input type="text" name="artist" onChange={this.handleChange}  /> <br />
-                    <label>Album:</label>
-                    <input type="text" name="album" onChange={this.handleChange} /> <br />
-                    <label>Release Date:</label>
-                    <input type="text" name="release_date" onChange={this.handleChange} /> <br />
-                    <label>Genre:</label>
-                    <input type="text" name="genre" onChange={this.handleChange} /> <br />
-                    <button type="submit">Add Song</button>
+                    <div className="form-group">
+                        <label>Title </label>
+                        <input type="text" className="form-control" name="title" onChange={this.handleChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Artist:</label>
+                        <input type="text" className="form-control" name="artist" onChange={this.handleChange}  />
+                    </div>
+                    <div className="form-group">
+                        <label>Album:</label>
+                        <input type="text" className="form-control" name="album" onChange={this.handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label>Release Date:</label>
+                        <input type="text" className="form-control" name="release_date" onChange={this.handleChange} />
+                    </div>
+                    <div className="form-group">
+                        <label>Genre:</label>
+                        <input type="text" className="form-control" name="genre" onChange={this.handleChange} />
+                    </div>
+                    <br />
+                    <button type="submit" className="btn btn-primary">Add Song</button>
                 </form>
             </div>
         );
